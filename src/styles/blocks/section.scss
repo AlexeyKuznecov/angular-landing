@@ -1,0 +1,9 @@
+.section {
+  margin-bottom: 70px;
+  @include lg() {
+    margin-bottom: 150px;
+  }
+  &:last-child {
+    margin-bottom: 70px;
+  }
+}

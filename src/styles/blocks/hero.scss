@@ -1,0 +1,43 @@
+.hero {
+  $hero-btn-height: 60px;
+
+  &-container {
+    background-image: none;
+    $container-padding-x: 0.75rem;
+
+    @include lg() {
+      background-repeat: no-repeat;
+      background-image: url('/assets/images/pizza-hero.png');
+      background-size: 36%;
+      background-position: right  bottom $hero-btn-height + 30px;
+      display: block;
+    }
+
+    @include xl() {
+      background-size: auto auto;
+      background-position: right $container-padding-x bottom $hero-btn-height;
+    }
+  }
+
+  &-title {
+    font-family: 'MullerExtraBold', sans-serif;
+    font-weight: 800;
+    color: $active-color-darken;
+    font-size: 45px;
+    line-height: 55px;
+    margin: 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    color: $active-color-darken;
+  }
+
+  &__btn.btn {
+    height: $hero-btn-height;
+    width: 225px;
+  }
+}

@@ -1,0 +1,46 @@
+.nav-wrap {
+  display: flex;
+  align-items: center;
+}
+
+$nav-item-margin-bottom: 10px;
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: -#{$nav-item-margin-bottom};
+
+  @include md() {
+    justify-content: flex-start;
+  }
+}
+
+.nav-item {
+  padding: 0 10px;
+  margin-bottom: $nav-item-margin-bottom;
+
+  &:not(:last-child) {
+    margin-right: 0;
+
+    @include md() {
+      margin-right: 10px;
+    }
+
+    @include lg() {
+      margin-right: 25px;
+    }
+  }
+}
+
+.nav-link {
+  padding: 0;
+  color: $nav-link-color;
+  letter-spacing: 0.32px;
+  line-height: 19px;
+
+  &:hover, &:focus {
+    color: $nav-link-color;
+  }
+}

@@ -1,0 +1,14 @@
+<section class="products section" id="products">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="products__title">Выберите свою любимую пиццу</h2>
+      </div>
+    </div>
+    <div class="row row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+      <div *ngFor="let product of products$ | async; let idx = index;">
+        <app-product [product]="product" [index]="idx + 1"></app-product>
+      </div>
+    </div>
+  </div>
+</section>

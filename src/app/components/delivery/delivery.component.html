@@ -1,0 +1,64 @@
+<section class="delivery section" id="delivery">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-lg-5 mb-lg-0 mb-3">
+        <h3 class="delivery__title">Хватит думать! <span class="d-block text-active-darken">Доставим заказ за 30&nbsp;минут!</span></h3>
+        <p class="delivery__text">
+          Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+        </p>
+      </div>
+      <div class="offset-lg-1 col d-flex align-items-end">
+        <form [formGroup]="form" (ngSubmit)="send()" class="form delivery__form">
+          <div class="form-item">
+            <input
+              (input)="inputName($event)"
+              formControlName="name"
+              type="text"
+              class="form-input"
+              placeholder="Ваше имя"
+            >
+            <small
+              class="form-error"
+              *ngIf="name?.invalid && name?.hasError('required') && (name?.dirty || name?.touched)"
+            >
+              {{ errors.required }}
+            </small>
+          </div>
+          <div class="form-item">
+            <input
+              formControlName="address"
+              type="text"
+              class="form-input"
+              placeholder="Адрес доставки"
+            >
+            <small
+              class="form-error"
+              *ngIf="address?.invalid && address?.hasError('required') && (address?.dirty || address?.touched)"
+            >
+              {{ errors.required }}
+            </small>
+          </div>
+          <div class="form-item">
+            <input
+              formControlName="phone"
+              type="text"
+              class="form-input"
+              placeholder="Телефон"
+            >
+            <ng-container *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+              <small class="form-error" *ngIf="phone?.hasError('required')">
+                {{ errors.required }}
+              </small>
+              <small class="form-error" *ngIf="phone?.hasError('pattern')">
+                {{ errors.patternPhone }}
+              </small>
+            </ng-container>
+          </div>
+          <button type="submit" [disabled]="form.invalid || form.disabled" class="btn delivery__btn">
+            Оформить заказ
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

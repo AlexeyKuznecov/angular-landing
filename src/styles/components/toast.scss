@@ -1,0 +1,42 @@
+.toast-container .ngx-toastr {
+  border-radius: 0;
+  box-shadow: $box-shadow;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+.toast-success {
+  background-image: none;
+  background-color: #fff;
+}
+
+.toast-close-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 33px;
+  line-height: 1;
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+  text-shadow: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+button.toast-close-button {
+  padding: 0 5px;
+}
+
+.toast-container .ngx-toastr {
+  padding: 15px 40px 15px 20px;
+  color: $active-color-darken;
+
+  &:hover {
+    cursor: default;
+    box-shadow: $box-shadow;
+  }
+}

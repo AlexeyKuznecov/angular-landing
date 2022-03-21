@@ -1,0 +1,51 @@
+.benefits {
+  margin-bottom: 59px;
+
+  &-row {
+    display: flex;
+    flex-direction: column;
+
+    @include sm() {
+      flex-direction: row;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include sm() {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include sm() {
+        margin-right: 17px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__image {
+      margin-right: 17px;
+    }
+
+    &__title {
+      font-family: 'MullerExtraBold', sans-serif;
+      color: $active-color;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      color: $active-color-darken;
+      line-height: 16px;
+      max-width: 250px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="products-item">
+  <div class="products-item__img">
+    <img
+      [src]="'/assets/images/pizza-' + index + '.png'"
+      [alt]="product.title"
+      lightbox
+      [backgroundOpacity]="0.4"
+      [simpleMode]="true"
+      [hideThumbnail]="false"
+    >
+  </div>
+
+  <span class="products-item__title">
+    {{ product.title }}
+  </span>
+
+  <p class="products-item__text">
+    {{ product.description }}
+  </p>
+
+  <a href="#" class="btn products-item__btn">
+    В корзину
+  </a>
+</div>

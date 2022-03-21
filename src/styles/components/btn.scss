@@ -1,0 +1,18 @@
+.btn {
+  height: 50px;
+  background-color: $active-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MullerBold', sans-serif;
+  font-weight: 700;
+  color: #382400;
+  transition: background-color .2s;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+
+  &:hover {
+    background-color: lighten($active-color, 10%);
+  }
+}

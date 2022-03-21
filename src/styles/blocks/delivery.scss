@@ -1,0 +1,38 @@
+.delivery {
+  @include lg() {
+    padding-top: 68px;
+    background-image: url('/assets/images/pizza-form.png');
+    background-repeat: no-repeat;
+    background-position: right -5% bottom 143%;
+  }
+
+  @include xl() {
+    background-position: left 85% bottom 143%;
+  }
+
+  &__form {
+    width: 330px;
+  }
+
+  &__title {
+    font-family: 'MullerExtraBold', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 45px;
+    color: $active-color;
+    margin-bottom: 30px;
+
+    @include md() {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__text {
+    color: $active-color-darken;
+    line-height: 24px;
+  }
+
+  &__btn {
+    height: 60px;
+  }
+}

@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    margin-bottom: 24px;
+  }
+
+  &-input {
+    border: 1px solid $active-color-darken;
+    font-size: 18px;
+    height: 60px;
+    color: #CBA86E;
+    padding-left: 24px;
+
+    &:focus {
+      border-color: $active-color;
+      outline:none;
+    }
+  }
+
+  &-error {
+    display: block;
+    margin-top: 2px;
+    color: red;
+    font-weight: 100;
+  }
+}
