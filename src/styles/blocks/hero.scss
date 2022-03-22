@@ -7,7 +7,7 @@
 
     @include lg() {
       background-repeat: no-repeat;
-      background-image: url('/assets/images/pizza-hero.png');
+      background-image: url('../../assets/images/pizza-hero.png');
       background-size: 36%;
       background-position: right  bottom $hero-btn-height + 30px;
       display: block;

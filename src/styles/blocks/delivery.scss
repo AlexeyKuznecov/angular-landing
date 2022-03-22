@@ -1,7 +1,7 @@
 .delivery {
   @include lg() {
     padding-top: 68px;
-    background-image: url('/assets/images/pizza-form.png');
+    background-image: url('../../assets/images/pizza-form.png');
     background-repeat: no-repeat;
     background-position: right -5% bottom 143%;
   }

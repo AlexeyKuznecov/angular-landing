@@ -2,10 +2,10 @@
   @font-face {
     font-family: $font-family;
     font-display: swap;
-    src: url('/assets/fonts/#{$file-path}.eot');
-    src: url('/assets/fonts/#{$file-path}.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/#{$file-path}.woff') format('woff'),
-    url('/assets/fonts/#{$file-path}.ttf') format('truetype');
+    src: url('../../assets/fonts/#{$file-path}.eot');
+    src: url('../../assets/fonts/#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/#{$file-path}.woff') format('woff'),
+    url('../../assets/fonts/#{$file-path}.ttf') format('truetype');
     font-weight: $weight;
     font-style: $style;
   };
